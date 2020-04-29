@@ -1,0 +1,18 @@
+This is a simplified recreation of the World War II Enigma Machine used by German soldiers to encrypt messages in wartime. 
+
+To learn how the Enigma Machine works and what exactly the rotors or plugboard settings are and how they operate, click the "Learn More" button at the bottom of this window.
+
+To begin encrypting a message, choose the initial rotor positions by dragging the sliders labelled under 'Rotor I', 'II' and 'III'. Record this 3-letter combination either manually or by clicking Export after clicking Run. For example, if you set the Rotor I slider to 'C', the Rotor II slider to 'A' and the Rotor III slider to 'T', record CAT.
+
+Now, enter the message to be encrypted in CAPITAL LETTERS in the first text-box (with an X to represent spaces, ZZ to represent commas and FRAQ to represent a question mark) under the rotor sliders and click run. (Historically, the Enigma Machine only took in capital letters like a typewriter with a capital X to represent spaces and had no options for more elaborate writing, the decrypted message would just include the X, ZZ or FRAQ which was manually understood by soldiers on the other end). The encrypted message will be shown in the second text box under the Run button. Also note that there is no cause to be alarmed over the rotor sliders changing position, this is a base functionality of the Enigma machine.
+
+To save this encrypted text (the same is true for decrypted text) or if the text is too long too be displayed in the text-box, click export to save it in a .txt file named "message" in the same directory where the program is. The message will be followed by a record of the initial rotor settings you used while encrypting/decrypting in the exported txt file.
+
+Click Clear to refresh both text-boxes and start encrypting or decrypting a new message. Be aware that the initial rotor positions you recorded for your last message have changed to something else now and if you want to keep using the same recorded combination as earlier, you will have to drag the sliders back to the settings you want to use. If you want to continuously encrypt messages while still keeping track of the initial settings being used-you can click run to encrypt multiple times and click export at the end to have a list of messages followed by their initial settings recorded in the txt file.
+
+To let a friend on another end decrypt your message, send him the three letter combination you recorded earlier+your encrypted message or just your exported txt file, also don't forget a download link to (or your copy of) the Enigma Simulator. 
+
+To decrypt a message you have received, set the sliders according to the three letter combination (e.g C, A and T for the combination 'CAT'), enter the encrypted message in the first textbox and click Run. Everything is exactly the same for both processes except a random combination cannot be chosen while decrypting and the inputs and outputs for the text are inverted.
+
+Click Quit if you're done with your super-cool secret communication and sleep in peace knowing your communication is safe (unless the person trying to eavesdrop on it is Alan Turing ;) 
+  
