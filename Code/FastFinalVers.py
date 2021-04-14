@@ -84,9 +84,8 @@ rotor2listTemp = []
 rotor3listTemp = []
 reflectorBlist=['Y','R','U','H','Q','S','L','D','P','X','N',
             'G','O','K','M','I','E','B','F','Z','C','W','V','J','A','T']
-# dfltPB1=['G','V','U','R','P',
-#          'S','L','W','I','H']
-#uncomment after you aren't testing
+ dfltPB1=['G','V','U','R','P',
+          'S','L','W','I','H']
 dfltPB2=['A','C','D','X','N',
          'T','F','M','B','O']
 dfltPB1=['A','C','D','X','N',
