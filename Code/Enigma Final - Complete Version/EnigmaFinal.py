@@ -140,6 +140,7 @@ exportRotors=[]
 helpStatus = False
 finalmsg=[]
 countshift = 0
+first = True
 
 #TODO
 #shift to a characte based model?
@@ -268,7 +269,7 @@ def rotor2(mssg):
         rotor3(postr2)
 
 def rotor3(mssg):
-    global countshift
+    global first, countshift
     global reverse
     postr3=[]
     
@@ -331,7 +332,8 @@ def plugboard(mssg,lstplugboard1=dfltPB1,lstplugboard2=dfltPB2):
         reverse=False
 
 def code():
-    global finalmsg, countf, countm, exportCounter, exportRotors
+    global finalmsg, countf, countm, exportCounter, exportRotors, countshift
+    countshift = 0
     #rotorinput=list(input("Enter initial rotor settings for rotors-L,M and R:"))
     omssg= entryvar.get()
     omssg= omssg.upper()
