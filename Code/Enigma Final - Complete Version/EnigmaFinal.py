@@ -240,7 +240,7 @@ def rotor1(mssg):
         for char in mssg:
         
             if char in alphabetlist:
-                changedletter=alphabetlist[(alphabetlist.index(char) + abs(counts1 - countm1)) % 26]
+                changedletter=alphabetlist[(rotor1listTemp.index(char) + abs(counts1 - countm1)) % 26]
                 postr1.append(changedletter)
         print("r1",postr1)    
         rotor2(postr1)
@@ -253,7 +253,7 @@ def rotor2(mssg):
         for char in mssg:
             
             if char in alphabetlist:
-                changedletter=rotor2listTemp[alphabetlist.index(char) - abs(countm1 - countf1)) % 26]
+                changedletter = rotor2listTemp[(alphabetlist.index(char) - abs(countm1 - countf1)) % 26]
                 postr2.append(changedletter)   
                  
         print("r2",postr2)
@@ -268,6 +268,7 @@ def rotor2(mssg):
         rotor3(postr2)
 
 def rotor3(mssg):
+    global countshift
     global reverse
     postr3=[]
     
