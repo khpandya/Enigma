@@ -139,6 +139,8 @@ exportCounter=0
 exportRotors=[]
 helpStatus = False
 finalmsg=[]
+countshift = 0
+
 #TODO
 #shift to a characte based model?
 #funcs. for rotor 4 and 5
@@ -228,7 +230,7 @@ def rotor1(mssg):
         for char in mssg:
             
             if char in alphabetlist:
-                changedletter=rotor1listTemp[alphabetlist.index(char)]
+                changedletter=rotor1listTemp[(alphabetlist.index(char) - abs(counts1 - countm1)) % 26]
                 postr1.append(changedletter)   
                  
         reverse=True
@@ -238,7 +240,7 @@ def rotor1(mssg):
         for char in mssg:
         
             if char in alphabetlist:
-                changedletter=alphabetlist[rotor1listTemp.index(char)]
+                changedletter=alphabetlist[(alphabetlist.index(char) + abs(counts1 - countm1)) % 26]
                 postr1.append(changedletter)
         print("r1",postr1)    
         rotor2(postr1)
@@ -251,7 +253,7 @@ def rotor2(mssg):
         for char in mssg:
             
             if char in alphabetlist:
-                changedletter=rotor2listTemp[alphabetlist.index(char)]
+                changedletter=rotor2listTemp[alphabetlist.index(char) - abs(countm1 - countf1)) % 26]
                 postr2.append(changedletter)   
                  
         print("r2",postr2)
@@ -260,7 +262,7 @@ def rotor2(mssg):
         for char in mssg:
         
             if char in alphabetlist:
-                changedletter=alphabetlist[rotor2listTemp.index(char)]
+                changedletter=alphabetlist[(rotor2listTemp.index(char) + abs(countm1 - countf1)) % 26]
                 postr2.append(changedletter)
         print("r2",postr2)    
         rotor3(postr2)
@@ -270,7 +272,9 @@ def rotor3(mssg):
     postr3=[]
     
     if reverse==False:
+        shift()
         for char in mssg:
+            countshift += 1
             test=[]
             if char in alphabetlist:
                 changedletter=rotor3listTemp[alphabetlist.index(char)]
@@ -280,7 +284,8 @@ def rotor3(mssg):
                 print("r3inloop postr3andTest",postr3,test)
                 print("r3list is now",rotor3listTemp)
                 rotor2(test)
-                shift()
+                if countshift != len(mssg):
+                    shift()
                      
         #print("r3 (rev F) Finally (except running PB-the mssg is)",postr3)
         #rotor2(postr3)        
