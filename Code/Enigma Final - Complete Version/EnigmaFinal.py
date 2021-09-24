@@ -140,7 +140,6 @@ exportRotors=[]
 helpStatus = False
 finalmsg=[]
 countshift = 0
-first = True
 
 #TODO
 #shift to a characte based model?
