@@ -330,7 +330,7 @@ def plugboard(mssg,lstplugboard1=dfltPB1,lstplugboard2=dfltPB2):
         #set everything to initial position so it works again for next character in for loop in rotor 3
         reverse=False
 
-def code():
+def code(*event):
     global finalmsg, countf, countm, exportCounter, exportRotors, countshift
     countshift = 0
     #rotorinput=list(input("Enter initial rotor settings for rotors-L,M and R:"))
